@@ -10,3 +10,19 @@ const firstName = "asmaa";
 const lastName = "elbatanony";
 
 console.log(firstName + " " + lastName);
+
+let x = 2 + 4;
+console.log(x);
+x += 10;
+x++;
+x--;
+
+console.log(x);
+
+console.log(ageJonas === ageSarah);
+console.log(ageSarah >= 18);
+console.log(now - 1990 > now - 1998);
+
+let z, y;
+z = y = 26 - 8 - 8;
+console.log(z, y);
