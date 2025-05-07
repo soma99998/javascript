@@ -10,9 +10,14 @@ function calcAge(birthYear) {
       var milllenial = true;
       const str = `you are milllenial ${firstName}`;
       console.log(str);
+
+      function add(a, b) {
+        return a + b;
+      }
     }
     //console.log(str);
     console.log(milllenial);
+    add(2, 3);
   }
   printAge();
   return age;
