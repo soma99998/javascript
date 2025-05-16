@@ -21,12 +21,41 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+  orderDelivery: function ({
+    time = "20:00",
+    address,
+    mainIndex = 0,
+    starterIndex = 0,
+  }) {
+    console.log(
+      `${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered at${address}in ${time}`
+    );
+  },
 };
-const { name, categories } = restaurant;
-console.log(name, categories);
+
+restaurant.orderDelivery({
+  time: "22:30",
+  address: "maadi",
+  mainIndex: 2,
+  starterIndex: 2,
+});
+restaurant.orderDelivery({ address: "madnit naser" });
+const { name, categories, openingHours } = restaurant;
+console.log(name, categories, openingHours);
 //rename
 const { name: restaurantName, openingHours: hours } = restaurant;
 console.log(restaurantName, hours);
-
+//default values
 const { menu = {}, starterMenu: starters = [] } = restaurant;
 console.log(menu, starters);
+//mutating variables
+let a = 111;
+let b = 999;
+const obj = { a: 23, b: 7, c: 14 };
+({ a, b } = obj);
+console.log(a, b);
+//nested object
+const {
+  fri: { open, close },
+} = openingHours;
+console.log(open, close);
