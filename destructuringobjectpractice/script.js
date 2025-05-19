@@ -226,6 +226,9 @@ const books = [
 // into variables called title, author and ISBN.
 const { title, author, ISBN } = books[0];
 console.log(title, author, ISBN);
+
+//const { title, author, ISBN } = books[0];
+//console.log(title, author, ISBN);
 //Each book object has the keywords property.
 //  Destructure the first book object from the books array
 //  into a variable called tags. The tags variable should be assigned

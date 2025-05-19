@@ -222,32 +222,38 @@ const books = [
     highlighted: true,
   },
 ];
+//Each book object has the author property, which stores an array of strings (author names) if there are multiple authors, or a single string (author name) if there is just one author.
 
-//Destructure the books array into two variables called firstBook
-// and secondBook.
+// Declare an array called bookAuthors, and fill it with authors of the first
+//  two books from the books array. The bookAuthors array should have just one level (no nested arrays).
 
-const [firstBook, secondBook] = books;
-console.log(firstBook, secondBook);
-//Destructure the books array into a variable called thirdBook. You must skip the first two books.
-const [, , thirdBook] = books;
-console.log(thirdBook);
-//Below is the nested ratings array that contains two other arrays.
-//  Destructure the nested ratings arrays into two variables called
-//  rating and ratingsCount. In the result of your destructuring,
-// the ratings variable should store a number 4.19,
-//  and the ratingsCount variable should store a number 144584.
-const ratings = [
-  ["rating", 4.19],
-  ["ratingsCount", 144584],
-];
-const [[, d], [, u]] = ratings;
-console.log(d, u);
-//Below is the ratingStars array.
-//  Destructure it into three variables called fiveStarRatings,
-//  oneStarRatings and threeStarRatings. Assign the threeStarRatings
-//  variable with a default value of 0.
+// show example solution
+//  {...}
+const bookAuthors = [...books[0].author, books[1].author];
+//books[0].author,book[1].author
 
-const ratingStars = [63405, 1808];
-const [t, y, r = 0] = ratingStars;
+console.log(bookAuthors);
 
-console.log(t, y, r);
+// 3.2
+
+// Write a function called spellWord that accepts a single string as an argument. This function should log to the console each letter of the argument separated by a space.
+// Example
+
+// Code:
+
+// spellWord('JavaScript')
+
+// Expected output:
+
+// "J a v a S c r i p t"
+
+// show example solution
+//  {...}
+
+//     The Spread Operator
+//     3.1
+//     3.2
+function spellWord(word) {
+  console.log(...word);
+}
+spellWord("soma");
