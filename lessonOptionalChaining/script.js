@@ -19,21 +19,25 @@ const restaurant = {
       close: 24,
     },
   },
+  order(num1, num2) {
+    // console.log(num1, num2);
+    return num1 + num2;
+  },
 };
 
-console.log(restaurant.openingHours.Mon?.open);
-const weekdays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+//console.log(restaurant.openingHours.Mon?.open);
+// const weekdays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 
-for (const item of weekdays) {
-  const open = restaurant.openingHours[item]?.open ?? "closed";
-  console.log(`on ${item} , we open at ${open}`);
-}
+// for (const item of weekdays) {
+//   const open = restaurant.openingHours[item]?.open ?? "closed";
+//   console.log(`on ${item} , we open at ${open}`);
+// }
 
-console.log(restaurant.order?.(0, 1) ?? "method doesn't exist");
+console.log(restaurant.order?.(2, 1) ?? "method doesn't exist");
 //array
 
-//const users = [{ name: "joans ", email: "hello@yahoo.com" }];
-const users = [];
+const users = [{ name: "joans ", email: "hello@yahoo.com" }];
+//  const users = [];
 console.log(users[0]?.name ?? "user undefined");
 if (users.length > 0) {
   console.log(users[0].name);

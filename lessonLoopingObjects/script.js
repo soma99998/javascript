@@ -44,28 +44,28 @@ const restaurant = {
   },
 };
 const temp = Object.keys(restaurant.openingHours);
-console.log(temp.length);
-console.log(temp);
-//for (const day of Object.keys(restaurant.openingHours)) {
-//console.log(day);
-//}
+// console.log(temp.length);
+// console.log(temp);
+// for (const day of Object.keys(restaurant.openingHours)) {
+//   console.log(day);
+// }
 let openStr = `we are open on ${temp.length} days :`;
 
-//
-console.log(temp.length);
-console.log(temp);
+// //
+// console.log(temp.length);
+// console.log(temp);
 for (const day of temp) {
   console.log(day);
   openStr += `${day},`;
 }
 console.log(openStr);
 
-//property values
+// //property values
 
-const values = Object.values(restaurant.openingHours);
-console.log(values);
+// const values = Object.values(restaurant.openingHours);
+// console.log(values);
 
-//entire object
+// //entire object
 
 const entries = Object.entries(restaurant.openingHours);
 console.log(entries);
