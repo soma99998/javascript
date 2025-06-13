@@ -40,10 +40,9 @@ const game = {
 };
 //Loop over the game.scored array and print each player name to the console,
 //along with the goal number (Example: "Goal 1: Lewandowski")
-let x = 0;
-for (const score of game.scored) {
-  x++;
-  console.log(`Goal ${x} : ${score}`);
+
+for (const [i, n] of game.scored.entries()) {
+  console.log(`Goal${i + 1} : ${n}`);
 }
 //Use a loop to calculate the average odd and log it to the console (We already
 //studied how to calculate averages, you can go check if you don't remember)
@@ -52,9 +51,13 @@ console.log(averageOdds);
 let sum = 0;
 for (const average of averageOdds) {
   //let sum = 0;
-  sum += average / 3;
+  sum += average;
+  console.log(sum);
+  console.log(averageOdds.length);
+  sum /= averageOdds.length;
 }
 console.log(sum);
+
 /*Print the 3 odds to the console, but in a nice formatted way, exactly like this:
 Odd of victory Bayern Munich: 1.33
 Odd of draw: 3.25
@@ -65,7 +68,7 @@ same property names*/
 
 const enteries = Object.entries(game.odds);
 console.log(enteries);
-for (const c of enteries) {
-  console.log(`Odd of victory ${game.team1} : ${values}\n odd of draw :${values}\n 
-        odd of victory ${game.team2}:${values}`);
+for (const [team, odd] of enteries) {
+  const teamStr = team === "x" ? "draw" : `victory ${game[team]}`;
+  console.log(`odd of ${teamStr} ${odd}`);
 }
